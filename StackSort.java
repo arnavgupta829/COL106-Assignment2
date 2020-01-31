@@ -60,9 +60,9 @@ public class StackSort{
         for(int i = 0; i<nums.length; i++)
             nums2[i] = nums[i];
         MyStack<String[]> st = new MyStack<String[]>();
-        while(isSorted(nums2) != true){
+        do{
             st.push(returnSteps(nums2));
-        }
+        }while(isSorted(nums2) != true);
         String[][] output = new String[st.getStackSize()][2*nums.length];
         try{
             for(int i = st.getStackSize()-1; i>=0; i--){
