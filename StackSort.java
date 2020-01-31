@@ -3,14 +3,14 @@ public class StackSort{
     public StackSort(){
     }
 
-    public boolean isSorted(int arr[]){
+    private boolean isSorted(int arr[]){
         for(int i = 0; i<arr.length-1; i++)
             if(arr[i]>arr[i+1])
                 return false;
         return true;
     }
 
-    public String[] returnSteps(int[] nums){
+    private String[] returnSteps(int[] nums){
         String[] output = new String[2*nums.length];
         try{
             MyStack<Integer> st = new MyStack<Integer>();
